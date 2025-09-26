@@ -119,4 +119,4 @@ Ayushi Rathour | Biotechnology Graduate | Building Medical AI Solutions
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE for details.
+This project is licensed under the [MIT](LICENSE) - see the LICENSE for details.
