@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Averion Labs</title>
+    
+    <!-- Load Razorpay BEFORE your app loads -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+      // Debug: Check if Razorpay loaded
+      window.addEventListener('load', function() {
+        console.log('🔍 Razorpay check:', typeof window.Razorpay);
+        if (typeof window.Razorpay !== 'function') {
+          console.error('❌ Razorpay failed to load!');
+        } else {
+          console.log('✅ Razorpay loaded successfully');
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

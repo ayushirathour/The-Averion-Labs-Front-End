@@ -1,0 +1,523 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Global Dark Theme (class-based) ===== */
+.dark {
+  color-scheme: dark;
+}
+
+.dark body {
+  @apply bg-gray-900 text-gray-100;
+}
+
+.dark .bg-white { @apply bg-gray-800 !important; }
+.dark .text-gray-900 { @apply text-gray-100 !important; }
+.dark .text-gray-800 { @apply text-gray-100 !important; }
+.dark .text-gray-700 { @apply text-gray-300 !important; }
+.dark .text-gray-600 { @apply text-gray-400 !important; }
+.dark .text-gray-500 { @apply text-gray-400 !important; }
+.dark .bg-gray-50 { @apply bg-gray-850 !important; }
+.dark .border-gray-200 { @apply border-gray-700 !important; }
+.dark .border-gray-100 { @apply border-gray-800 !important; }
+.dark .hover\:bg-gray-50:hover { @apply bg-gray-700 !important; }
+.dark .hover\:bg-gray-100:hover { @apply bg-gray-700 !important; }
+.dark .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,0.4); }
+
+/* Accessible primary color on dark */
+.dark .bg-primary-50 { @apply bg-blue-900/20 !important; }
+.dark .text-primary-700 { @apply text-blue-300 !important; }
+.dark .text-primary-600 { @apply text-blue-400 !important; }
+.dark .focus\:ring-offset-2 { @apply focus:ring-offset-gray-900; }
+
+/* Utility for slightly darker gray-850 used in cards */
+.bg-gray-850 { background-color: #1f2937; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom focus styles */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+}
+
+/* Animation utilities */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Medical theme customizations */
+.medical-gradient {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+}
+
+.medical-shadow {
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.1), 0 2px 4px -1px rgba(37, 99, 235, 0.06);
+}
+
+/* Loading spinner */
+.spinner {
+  border: 2px solid #f3f4f6;
+  border-top: 2px solid #2563eb;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* File upload drag and drop */
+.drag-active {
+  @apply border-primary-400 bg-primary-50;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-200 hover:shadow-md hover:-translate-y-1;
+}
+
+/* Button loading state */
+.btn-loading {
+  @apply opacity-75 cursor-not-allowed;
+}
+
+/* Form validation styles */
+.form-error {
+  @apply border-red-300 focus:ring-red-500 focus:border-red-500;
+}
+
+.form-success {
+  @apply border-green-300 focus:ring-green-500 focus:border-green-500;
+}
+
+/* Medical specific styles */
+.diagnosis-pneumonia {
+  @apply bg-red-50 border-red-200 text-red-800;
+}
+
+.diagnosis-normal {
+  @apply bg-green-50 border-green-200 text-green-800;
+}
+
+.confidence-high {
+  @apply text-green-600;
+}
+
+.confidence-medium {
+  @apply text-yellow-600;
+}
+
+.confidence-low {
+  @apply text-red-600;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .mobile-padding {
+    @apply px-4;
+  }
+  
+  .mobile-text {
+    @apply text-sm;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-break {
+    page-break-before: always;
+  }
+}
+
+/* Accessibility improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .high-contrast {
+    @apply border-2 border-black;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ===== RESPONSIVE ENHANCEMENTS FOR ADMIN DASHBOARD ===== */
+
+/* Enhanced Scrollbar Hide for Mobile Tab Navigation */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mobile-First Responsive Breakpoints */
+@media (max-width: 640px) {
+  /* Mobile Padding & Typography */
+  .mobile-padding {
+    @apply px-3 py-2;
+  }
+  
+  .mobile-text {
+    @apply text-xs;
+  }
+  
+  .mobile-header {
+    @apply text-xl;
+  }
+  
+  /* Mobile Tab Navigation */
+  .mobile-tab-nav {
+    @apply overflow-x-auto whitespace-nowrap scrollbar-hide;
+  }
+  
+  .mobile-tab-nav button {
+    @apply flex-shrink-0 px-2 py-2 text-xs;
+    min-width: fit-content;
+  }
+  
+  /* Mobile Table Styles */
+  .responsive-table {
+    @apply block w-full overflow-x-auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .responsive-table table {
+    @apply min-w-full border-collapse;
+  }
+  
+  .responsive-table thead {
+    @apply hidden;
+  }
+  
+  .responsive-table tbody tr {
+    @apply block border-b border-gray-200 mb-4 pb-4;
+  }
+  
+  .responsive-table td {
+    @apply block text-right border-none relative pl-[50%] py-2;
+  }
+  
+  .responsive-table td:before {
+    content: attr(data-label) ": ";
+    @apply absolute left-0 top-2 w-1/2 pl-3 font-medium text-left text-gray-600 text-xs uppercase;
+  }
+  
+  /* Mobile Card Grid */
+  .mobile-card-grid {
+    @apply grid grid-cols-2 gap-2;
+  }
+  
+  .mobile-card {
+    @apply p-3;
+  }
+  
+  .mobile-card h3 {
+    @apply text-xs;
+  }
+  
+  .mobile-card p {
+    @apply text-lg;
+  }
+  
+  /* Mobile Form Styles */
+  .mobile-form {
+    @apply space-y-3;
+  }
+  
+  .mobile-form input,
+  .mobile-form select {
+    @apply w-full text-sm;
+  }
+  
+  /* Mobile Search Bar */
+  .mobile-search {
+    @apply w-full mb-4;
+  }
+  
+  /* Mobile Filters Grid */
+  .mobile-filters {
+    @apply grid grid-cols-2 gap-2;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 641px) and (max-width: 768px) {
+  .tablet-card-grid {
+    @apply grid grid-cols-2 gap-4;
+  }
+  
+  .tablet-filters {
+    @apply grid grid-cols-3 gap-3;
+  }
+  
+  .tablet-table td {
+    @apply px-3 py-3;
+  }
+}
+
+/* Large Mobile / Small Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .medium-screen-nav button {
+    @apply px-3 py-2 text-sm;
+  }
+}
+
+/* Desktop Enhancements */
+@media (min-width: 1024px) {
+  .desktop-card-grid {
+    @apply grid grid-cols-4 gap-6;
+  }
+  
+  .desktop-filters {
+    @apply grid grid-cols-4 gap-4;
+  }
+}
+
+/* Enhanced Mobile Table Alternative - Card View */
+@media (max-width: 640px) {
+  .mobile-user-cards .user-card {
+    @apply bg-white rounded-lg shadow p-4 mb-4;
+  }
+  
+  .mobile-user-cards .user-header {
+    @apply flex items-center justify-between mb-3;
+  }
+  
+  .mobile-user-cards .user-details {
+    @apply space-y-2 text-sm;
+  }
+  
+  .mobile-user-cards .user-badges {
+    @apply flex flex-wrap gap-2 mt-3;
+  }
+  
+  .mobile-user-cards .user-actions {
+    @apply mt-3 pt-3 border-t;
+  }
+}
+
+/* Responsive Text Sizing */
+@media (max-width: 480px) {
+  h1 {
+    @apply text-xl;
+  }
+  
+  h2 {
+    @apply text-lg;
+  }
+  
+  h3 {
+    @apply text-base;
+  }
+  
+  .stat-card-value {
+    @apply text-xl;
+  }
+  
+  .stat-card-title {
+    @apply text-xs;
+  }
+}
+
+/* Touch Targets for Mobile */
+@media (max-width: 768px) {
+  button {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  .mobile-button {
+    @apply py-3 px-4 text-sm;
+  }
+  
+  .mobile-icon-button {
+    @apply p-3;
+  }
+}
+
+/* Loading States */
+.mobile-loading {
+  @apply flex items-center justify-center min-h-[200px];
+}
+
+.mobile-loading .spinner {
+  @apply w-8 h-8;
+}
+
+/* Enhanced Focus States for Accessibility */
+@media (max-width: 768px) {
+  .mobile-focus {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white;
+  }
+}
+
+/* Print Optimizations */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-break {
+    page-break-before: always;
+  }
+  
+  .print-table {
+    @apply text-xs;
+  }
+}
+
+/* Dark Mode Support */
+/* keep helpers; class-based now handles most */
+
+/* High Contrast Support */
+@media (prefers-contrast: high) {
+  .high-contrast {
+    @apply border-2 border-black;
+  }
+  
+  .high-contrast-button {
+    @apply border-2 border-black bg-white text-black;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Landscape Mobile Adjustments */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .landscape-compact {
+    @apply py-2;
+  }
+  
+  .landscape-header {
+    @apply text-lg;
+  }
+  
+  .landscape-nav {
+    @apply py-1;
+  }
+}
+
+/* Ultra-wide Screen Optimizations */
+@media (min-width: 1536px) {
+  .ultra-wide-container {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .ultra-wide-grid {
+    @apply grid grid-cols-6 gap-8;
+  }
+}
+
+/* Loading Skeleton for Mobile */
+.mobile-skeleton {
+  @apply animate-pulse;
+}
+
+.mobile-skeleton-line {
+  @apply h-4 bg-gray-200 rounded mb-2;
+}
+
+.mobile-skeleton-circle {
+  @apply w-8 h-8 bg-gray-200 rounded-full;
+}
+
+/* Enhanced Badge Styles */
+.responsive-badge {
+  @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium;
+}
+
+@media (max-width: 640px) {
+  .responsive-badge {
+    @apply px-1 py-0.5 text-xs;
+  }
+}
+
+/* Responsive Spacing Utilities */
+.responsive-spacing {
+  @apply space-y-4;
+}
+
+@media (max-width: 640px) {
+  .responsive-spacing {
+    @apply space-y-3;
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-spacing {
+    @apply space-y-2;
+  }
+}

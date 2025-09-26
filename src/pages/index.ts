@@ -1,0 +1,10 @@
+export { default as Login } from './auth/Login';
+export { default as Register } from './auth/Register';
+export { default as ForgotPassword } from './auth/ForgotPassword';
+export { default as ResetPassword } from './auth/ResetPassword';
+export { default as GoogleAuthCallback } from './auth/GoogleAuthCallback';
+export { default as Dashboard } from './Dashboard';
+export { default as Upload } from './Upload';
+export { default as Results } from './Results';
+export { default as Payment } from './Payment';
+export { default as Settings } from './Settings';
