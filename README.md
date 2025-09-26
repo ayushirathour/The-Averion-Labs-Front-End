@@ -33,7 +33,7 @@ This frontend includes a comprehensive set of features reflecting a production-r
 
 * **Model Access Interface**:
   * Model selection (Pneumonia vs. Skin Cancer)
-  * Single and batch image processing (up to 10 images)
+  * Single and batch image processing (up to 50 images)
   * Real-time upload and analysis progress tracking
   * Results display with confidence scores and classifications
 
