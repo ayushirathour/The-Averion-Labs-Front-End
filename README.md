@@ -27,7 +27,7 @@ The platform currently hosts the following pre-trained and validated models:
 * **Output**: Multi-class skin cancer classification
 * **Cost**: 2 credits per analysis
 
-## ✨ Key Features Implemented
+## ✨ Key Frontend Features & Backend Integrations
 
 This frontend includes a comprehensive set of features reflecting a production-ready application.
 
