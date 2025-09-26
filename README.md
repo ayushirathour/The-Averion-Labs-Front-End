@@ -113,6 +113,10 @@ The application will be available at `http://localhost:3001`.
 * `npm run preview`: Preview the production build locally
 * `npm run lint`: Run ESLint for code analysis
 
+## 👩‍💻 Developer
+Ayushi Rathour | Biotechnology Graduate | Building Medical AI Solutions
+
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
