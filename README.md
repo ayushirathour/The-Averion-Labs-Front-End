@@ -1,4 +1,4 @@
-# Averion Labs Medical AI Saas (Frontend Module)
+# The Averion Labs Medical AI SaaS (Frontend Module)
 
 ![Averion Labs Hero](public/images/averion-hero.jpg)
 
