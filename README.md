@@ -19,7 +19,7 @@ The platform currently hosts the following pre-trained and validated models:
 ### 1. Pneumonia Detection
 * **Input**: Chest X-ray images (JPEG, PNG, DICOM)
 * **Output**: Classification (Pneumonia/Normal) with confidence score
-* **Performance**: 96.4% sensitivity and 0.97 AUC on internal validation; 0.95 AUC on external validation
+* **Performance**: 96.4% sensitivity and 0.98 AUC on internal validation; 0.96 AUC on external validation
 * **Cost**: 1 credit per analysis
 
 ### 2. Skin Cancer Detection
