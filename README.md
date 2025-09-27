@@ -115,6 +115,10 @@ The application will be available at `http://localhost:3001`.
 
 ## 👩‍💻 Developer
 Ayushi Rathour | Biotechnology Graduate | Building Medical AI Solutions
+* **📧 Email:** [ayushirathour1804@gmail.com](mailto:ayushirathour1804@gmail.com)
+* **💼 LinkedIn:** [Ayushi Rathour](https://linkedin.com/in/ayushi-rathour)
+* **🐙 GitHub:** [@ayushirathour](https://github.com/ayushirathour)
+* **🤗 HuggingFace:** [ayushirathour](https://huggingface.co/ayushirathour)
 
 
 ## 📄 License
