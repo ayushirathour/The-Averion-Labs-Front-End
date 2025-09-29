@@ -2,7 +2,7 @@
 
 ![Averion Labs Hero](public/images/averion-hero.jpg)
 
-This repository contains the complete frontend for Averion Labs, a scalable SaaS platform designed to **host, serve, and monetize medical AI models**. The platform provides a web interface for users to access the initial suite of diagnostic models and leverages a Large Language Model (LLM) for advanced analysis and user support.
+This repository contains the complete frontend for Averion Labs, a scalable SaaS platform designed to **serve and monetize medical AI models**. The platform provides a web interface for users to access the initial suite of diagnostic models and leverages a Large Language Model (LLM) for advanced analysis and user support.
 
 **Note:** This is the **frontend module only**. It communicates with my separate [FastAPI backend](https://the-averion-labs.onrender.com/docs) that handles the core platform infrastructure, including user management, payments, and AI model orchestration.
 
